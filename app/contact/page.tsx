@@ -20,58 +20,68 @@ export const metadata: Metadata = {
 export default function ContactPage() {
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative bg-slate-950">
       <Navigation />
 
-      <div className="pt-32 pb-20 px-6 relative overflow-hidden">
+      {/* Animated background gradients */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-pink-600/20 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-600/20 to-transparent rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="pt-24 md:pt-32 pb-16 md:pb-20 px-4 md:px-6 relative overflow-hidden">
         <div className="wave-pattern" />
-        <div className="wave-side-left" />
-        <div className="wave-side-right" />
-        <div className="line-pattern" />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-transparent pointer-events-none" />
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-block border-4 border-foreground/80 px-16 py-8 mb-8">
-              <h1 className="text-5xl md:text-7xl font-bold text-foreground tracking-wider">CONTACT</h1>
-            </div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Ready to start a conversation? Reach out and let's discuss how we can help your business.
+          <div className="text-center mb-12 md:mb-16">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Get In Touch</h1>
+            <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Ready to start a conversation? Reach out and let's discuss how we can help your business grow.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <Card className="p-6 bg-card border-border text-center hover:border-primary/50 transition-all">
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                <Mail className="h-6 w-6 text-primary" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
+            <Card className="group relative p-6 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-pink-500/20 hover:border-pink-500/50 text-center transition-all duration-300 hover:shadow-lg hover:shadow-pink-600/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+              <div className="relative z-10 space-y-3">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center mx-auto">
+                  <Mail className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold">Email</h3>
+                <a
+                  href="mailto:client@prodesksolutions.in"
+                  className="text-gray-300 hover:text-pink-500 transition-colors text-sm break-all"
+                >
+                  client@prodesksolutions.in
+                </a>
               </div>
-              <h3 className="text-lg font-semibold text-card-foreground mb-2">Email</h3>
-              <a
-                href="mailto:client@prodesksolutions.in"
-                className="text-muted-foreground hover:text-primary transition-colors text-sm"
-              >
-                client@prodesksolutions.in
-              </a>
             </Card>
-            <Card className="p-6 bg-card border-border text-center hover:border-accent/50 transition-all">
-              <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mx-auto mb-4">
-                <Phone className="h-6 w-6 text-accent" />
+
+            <Card className="group relative p-6 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-purple-500/20 hover:border-pink-500/50 text-center transition-all duration-300 hover:shadow-lg hover:shadow-purple-600/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+              <div className="relative z-10 space-y-3">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mx-auto">
+                  <Phone className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold">Phone</h3>
+                <a href="tel:+919321146067" className="text-gray-300 hover:text-pink-500 transition-colors text-sm md:text-base">
+                  +91 9321146067
+                </a>
               </div>
-              <h3 className="text-lg font-semibold text-card-foreground mb-2">Phone</h3>
-              <a href="tel:+919321146067" className="text-muted-foreground hover:text-accent transition-colors">
-                +91 9321146067
-              </a>
             </Card>
-            <Card className="p-6 bg-card border-border text-center hover:border-secondary/50 transition-all">
-              <div className="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center mx-auto mb-4">
-                <Clock className="h-6 w-6 text-secondary" />
+
+            <Card className="group relative p-6 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-pink-500/20 hover:border-pink-500/50 text-center transition-all duration-300 hover:shadow-lg hover:shadow-pink-600/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+              <div className="relative z-10 space-y-3">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center mx-auto">
+                  <Clock className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold">Office Hours</h3>
+                <p className="text-gray-300 text-sm md:text-base">
+                  Mon - Fri<br />
+                  9:00 AM - 6:00 PM IST
+                </p>
               </div>
-              <h3 className="text-lg font-semibold text-card-foreground mb-2">Office Hours</h3>
-              <p className="text-muted-foreground">
-                Mon - Fri
-                <br />
-                9:00 AM - 6:00 PM IST
-              </p>
             </Card>
           </div>
 

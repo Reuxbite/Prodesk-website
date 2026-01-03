@@ -20,8 +20,14 @@ export const metadata: Metadata = {
 
 export default function RecruitmentPage() {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative bg-slate-950">
       <Navigation />
+      
+      {/* Animated background gradients */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-pink-600/20 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-600/20 to-transparent rounded-full blur-3xl"></div>
+      </div>
       
       {/* Schema.org structured data for recruitment services */}
       <script
@@ -84,34 +90,31 @@ export default function RecruitmentPage() {
       />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 relative overflow-hidden">
+      <section className="pt-32 pb-20 px-4 md:px-6 relative overflow-hidden">
         <div className="wave-pattern" />
-        <div className="wave-side-left" />
-        <div className="wave-side-right" />
-        <div className="line-pattern" />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
-          <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 text-balance leading-tight">
-              Recruitment Services
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Hiring is one of the most important decisions a business makes, and also one of the easiest to get wrong.
+          <div className="text-center mb-12 space-y-4">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Recruitment Services</h1>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Hiring is one of the most important decisions a business makes. We make sure you get it right.
             </p>
           </div>
 
-          <Card className="p-10 bg-card border-border mb-12">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Prodesk Solutions offers recruitment services for businesses that want to hire carefully and deliberately. We focus on understanding your business, the role, and the working environment before sourcing candidates, so that the people you hire actually stay and perform.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Most recruitment agencies focus on speed and placement numbers. We focus on understanding. We work more like a recruitment consultant than a placement agency—fewer roles, more questions, better outcomes.
-            </p>
+          <Card className="relative overflow-hidden bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-pink-500/20 p-8 md:p-10 mb-12">
+            <div className="absolute inset-0 bg-gradient-to-br from-pink-600/5 to-transparent opacity-0"></div>
+            <div className="relative z-10 space-y-6">
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Prodesk Solutions offers recruitment services for businesses that want to hire carefully and deliberately. We focus on understanding your business, the role, and the working environment before sourcing candidates, so that the people you hire actually stay and perform.
+              </p>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Most recruitment agencies focus on speed and placement numbers. We focus on understanding. We work more like a recruitment consultant than a placement agency—fewer roles, more questions, better outcomes.
+              </p>
+            </div>
           </Card>
 
           <div className="flex items-center justify-center gap-4">
             <Link href="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">
+              <Button size="lg" className="bg-pink-600 hover:bg-pink-500 text-white h-12 px-8 hover:shadow-lg hover:shadow-pink-600/50">
                 Start a Conversation
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -121,76 +124,53 @@ export default function RecruitmentPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-6 bg-card/30 backdrop-blur-sm relative overflow-hidden">
-        <div className="wave-side-left" />
-        <div className="wave-side-right" />
-        <div className="line-pattern" />
+      <section className="py-20 px-4 md:px-6 relative overflow-hidden">
         <div className="max-w-4xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">How Our Recruitment Process Works</h2>
-            <p className="text-lg text-muted-foreground">No rushed shortlists. No bulk resumes.</p>
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl md:text-5xl font-bold">How Our Recruitment Process Works</h2>
+            <p className="text-lg text-gray-300">No rushed shortlists. No bulk resumes.</p>
           </div>
 
           <div className="space-y-8">
-            <div className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shrink-0 text-foreground font-semibold">
-                1
+            {[
+              {
+                num: "1",
+                title: "We spend time understanding your business and the role",
+                desc: "This isn't a quick check-in. We want to know what the day-to-day really looks like, what challenges the person will face, and what success actually means in this position."
+              },
+              {
+                num: "2",
+                title: "We clarify expectations, responsibilities, and priorities",
+                desc: "We work with you to define what good looks like. What skills matter. What personality traits will fit your team. This clarity guides everything that comes next."
+              },
+              {
+                num: "3",
+                title: "We source candidates who align with those requirements",
+                desc: "We look for people who match the profile we've developed, not just people with the right keywords on their resume. Quality over volume."
+              },
+              {
+                num: "4",
+                title: "We screen for fit, communication, and capability",
+                desc: "We do practical screening to see if candidates can actually do the work and work well with your team. Then we present the strongest candidates to you."
+              },
+              {
+                num: "5",
+                title: "We help you make a confident hiring decision",
+                desc: "We support you through interviews, answer your questions, and help you choose someone you'll actually be happy to work with six months from now."
+              }
+            ].map((step, idx) => (
+              <div key={idx} className="flex gap-6 items-start">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-pink-600 to-purple-600 flex items-center justify-center shrink-0 text-white font-semibold">
+                  {step.num}
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">We spend time understanding your business and the role</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  This isn't a quick check-in. We want to know what the day-to-day really looks like, what challenges the person will face, and what success actually means in this position.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center shrink-0 text-foreground font-semibold">
-                2
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">We clarify expectations, responsibilities, and priorities</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  We work with you to define what good looks like. What skills matter. What personality traits will fit your team. This clarity guides everything that comes next.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center shrink-0 text-foreground font-semibold">
-                3
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">We source candidates who align with those requirements</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  We look for people who match the profile we've developed, not just people with the right keywords on their resume. Quality over volume.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary via-accent to-secondary flex items-center justify-center shrink-0 text-foreground font-semibold">
-                4
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">We screen for fit, communication, and capability</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  We do practical screening to see if candidates can actually do the work and work well with your team. Then we present the strongest candidates to you.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center shrink-0 text-foreground font-semibold">
-                5
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">We help you make a confident hiring decision</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  We support you through interviews, answer your questions, and help you choose someone you'll actually be happy to work with six months from now.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

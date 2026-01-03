@@ -2,71 +2,40 @@
 @import "tw-animate-css";
 
 :root {
-  /* Updated color scheme to match ProDesk branding: deep navy, teal, purple, and pink */
-  --background: oklch(0.18 0.06 270); /* Deep navy blue */
-  --foreground: oklch(0.98 0.01 250); /* Bright white for text */
-  --card: oklch(0.22 0.06 268); /* Slightly lighter navy for cards */
-  --card-foreground: oklch(0.98 0.01 250);
-  --popover: oklch(0.22 0.06 268);
-  --popover-foreground: oklch(0.98 0.01 250);
-  --primary: oklch(0.65 0.18 320); /* Vibrant pink */
-  --primary-foreground: oklch(0.98 0.01 250);
-  --secondary: oklch(0.6 0.15 200); /* Teal/cyan */
-  --secondary-foreground: oklch(0.98 0.01 250);
-  --muted: oklch(0.3 0.05 270);
-  --muted-foreground: oklch(0.75 0.03 250);
-  --accent: oklch(0.55 0.16 280); /* Purple accent */
-  --accent-foreground: oklch(0.98 0.01 250);
-  --border: oklch(0.3 0.06 270);
-  --input: oklch(0.25 0.06 270);
-  --ring: oklch(0.65 0.18 320);
-  --chart-1: oklch(0.6 0.15 200);
-  --chart-2: oklch(0.65 0.18 320);
-  --chart-3: oklch(0.55 0.16 280);
-  --chart-4: oklch(0.7 0.14 340);
-  --chart-5: oklch(0.5 0.14 260);
-  --radius: 0.75rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* Modern purple-pink gradient theme */
+  --background: #0a0e27; /* Deep navy base */
+  --foreground: #f8f9fa; /* Bright white */
+  --card: #111827; /* Slightly lighter navy */
+  --card-foreground: #f8f9fa;
+  --primary: #ec4899; /* Pink */
+  --primary-foreground: #ffffff;
+  --secondary: #a78bfa; /* Light purple */
+  --secondary-foreground: #ffffff;
+  --accent: #7c3aed; /* Deep purple */
+  --accent-foreground: #ffffff;
+  --muted: #4b5563;
+  --muted-foreground: #9ca3af;
+  --border: #1f2937;
+  --input: #1f2937;
+  --ring: #ec4899;
 }
 
 .dark {
-  --background: oklch(0.18 0.06 270);
-  --foreground: oklch(0.98 0.01 250);
-  --card: oklch(0.22 0.06 268);
-  --card-foreground: oklch(0.98 0.01 250);
-  --popover: oklch(0.22 0.06 268);
-  --popover-foreground: oklch(0.98 0.01 250);
-  --primary: oklch(0.65 0.18 320);
-  --primary-foreground: oklch(0.98 0.01 250);
-  --secondary: oklch(0.6 0.15 200);
-  --secondary-foreground: oklch(0.98 0.01 250);
-  --muted: oklch(0.3 0.05 270);
-  --muted-foreground: oklch(0.75 0.03 250);
-  --accent: oklch(0.55 0.16 280);
-  --accent-foreground: oklch(0.98 0.01 250);
-  --border: oklch(0.3 0.06 270);
-  --input: oklch(0.25 0.06 270);
-  --ring: oklch(0.65 0.18 320);
-  --chart-1: oklch(0.6 0.15 200);
-  --chart-2: oklch(0.65 0.18 320);
-  --chart-3: oklch(0.55 0.16 280);
-  --chart-4: oklch(0.7 0.14 340);
-  --chart-5: oklch(0.5 0.14 260);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --background: #0a0e27;
+  --foreground: #f8f9fa;
+  --card: #111827;
+  --card-foreground: #f8f9fa;
+  --primary: #ec4899;
+  --primary-foreground: #ffffff;
+  --secondary: #a78bfa;
+  --secondary-foreground: #ffffff;
+  --accent: #7c3aed;
+  --accent-foreground: #ffffff;
+  --muted: #4b5563;
+  --muted-foreground: #9ca3af;
+  --border: #1f2937;
+  --input: #1f2937;
+  --ring: #ec4899;
 }
 
 :root {
@@ -84,40 +53,97 @@ body {
   color: var(--foreground);
 }
 
-/* Enhanced flowing wave pattern styles to match ProDesk branding with multiple animated wave layers */
+/* Modern gradient backgrounds */
+.gradient-purple-pink {
+  background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+}
+
+.gradient-dark-purple {
+  background: linear-gradient(135deg, #0a0e27 0%, #1e1b4b 50%, #5b21b6 100%);
+}
+
+/* Animated gradient glow */
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-flow 8s ease infinite;
+}
+
+/* Soft glow effect */
+@keyframes soft-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.2), 0 0 40px rgba(124, 58, 237, 0.1); }
+  50% { box-shadow: 0 0 30px rgba(236, 72, 153, 0.3), 0 0 60px rgba(124, 58, 237, 0.15); }
+}
+
+.animate-glow {
+  animation: soft-glow 4s ease-in-out infinite;
+}
+
+/* Fade in on scroll */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-fade-in {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+/* Modern wave pattern - minimal and elegant */
 .wave-pattern {
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  opacity: 0.3;
+  opacity: 0.15;
   pointer-events: none;
 }
 
-.wave-pattern::before,
+.wave-pattern::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(236, 72, 153, 0.5) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float-soft 20s ease-in-out infinite;
+}
+
 .wave-pattern::after {
   content: "";
   position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(ellipse at center, rgba(124, 58, 237, 0.4) 0%, transparent 70%);
   border-radius: 50%;
-  filter: blur(60px);
+  filter: blur(80px);
+  animation: float-soft-reverse 22s ease-in-out infinite;
 }
 
-.wave-pattern::before {
-  top: -30%;
-  right: -10%;
-  width: 80%;
-  height: 100%;
-  background: radial-gradient(ellipse at center, oklch(0.65 0.18 320) 0%, oklch(0.55 0.16 280) 30%, transparent 70%);
-  animation: wave-float-1 20s ease-in-out infinite;
+@keyframes float-soft {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -30px); }
 }
 
-.wave-pattern::after {
-  bottom: -20%;
-  left: -10%;
-  width: 70%;
-  height: 80%;
-  background: radial-gradient(ellipse at center, oklch(0.55 0.16 280) 0%, oklch(0.6 0.15 200) 30%, transparent 70%);
-  animation: wave-float-2 18s ease-in-out infinite reverse;
+@keyframes float-soft-reverse {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-30px, 30px); }
 }
 
 /* Side wave patterns - left and right flowing waves */
