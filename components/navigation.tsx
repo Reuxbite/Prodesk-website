@@ -10,11 +10,8 @@ export function Navigation() {
           <Image src="/prodesk-logo.png" alt="ProDesk Solutions" width={180} height={80} className="h-12 w-auto" />
         </Link>
         <div className="flex items-center gap-8">
-          <Link href="/recruitment" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
-            Recruitment Services
-          </Link>
-          <Link href="/#how-we-work" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
-            How We Work
+          <Link href="/#services" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
+            Services
           </Link>
           <Link href="/#why-prodesk" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
             Why Prodesk
@@ -22,9 +19,12 @@ export function Navigation() {
           <Link href="/#about" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
             About
           </Link>
+          <Link href="/contact" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
+            Contact
+          </Link>
           <Link href="/contact">
-            <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Contact Us
+            <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              Schedule a Call
             </Button>
           </Link>
         </div>
