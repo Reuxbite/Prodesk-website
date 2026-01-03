@@ -47,10 +47,10 @@ export default function ContactPage() {
               </div>
               <h3 className="text-lg font-semibold text-card-foreground mb-2">Email</h3>
               <a
-                href="mailto:Prodesksolutions1710@gmail.com"
+                href="mailto:client@prodesksolutions.in"
                 className="text-muted-foreground hover:text-primary transition-colors text-sm"
               >
-                Prodesksolutions1710@gmail.com
+                client@prodesksolutions.in
               </a>
             </Card>
             <Card className="p-6 bg-card border-border text-center hover:border-accent/50 transition-all">

@@ -52,7 +52,7 @@ export default function RootLayout({
               logo: "https://prodesksolutions.in/favicon.png",
               description: "Prodesk Solutions provides recruitment services for startups and growing businesses.",
               telephone: "+919321146067",
-              email: "Prodesksolutions1710@gmail.com",
+              email: "client@prodesksolutions.in",
               areaServed: "IN",
               sameAs: [],
             }),

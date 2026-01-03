@@ -11,7 +11,7 @@ export const recruitmentServiceSchema = {
     name: "Prodesk Solutions",
     url: "https://prodesksolutions.in",
     telephone: "+919321146067",
-    email: "Prodesksolutions1710@gmail.com",
+    email: "client@prodesksolutions.in",
     address: {
       "@type": "PostalAddress",
       addressCountry: "IN",
@@ -33,7 +33,7 @@ export const organizationSchema = {
   description:
     "Prodesk Solutions provides recruitment services and hiring support for startups and growing businesses with a fit-first approach.",
   telephone: "+919321146067",
-  email: "Prodesksolutions1710@gmail.com",
+  email: "client@prodesksolutions.in",
   address: {
     "@type": "PostalAddress",
     addressCountry: "IN",

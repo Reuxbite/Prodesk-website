@@ -38,7 +38,7 @@ export default function RecruitmentPage() {
               name: "Prodesk Solutions",
               url: "https://prodesksolutions.in",
               telephone: "+919321146067",
-              email: "Prodesksolutions1710@gmail.com",
+              email: "client@prodesksolutions.in",
             },
             areaServed: "IN",
             serviceType: "Recruitment Consultancy",
