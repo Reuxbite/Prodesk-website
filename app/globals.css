@@ -1,0 +1,342 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color scheme to match ProDesk branding: deep navy, teal, purple, and pink */
+  --background: oklch(0.18 0.06 270); /* Deep navy blue */
+  --foreground: oklch(0.98 0.01 250); /* Bright white for text */
+  --card: oklch(0.22 0.06 268); /* Slightly lighter navy for cards */
+  --card-foreground: oklch(0.98 0.01 250);
+  --popover: oklch(0.22 0.06 268);
+  --popover-foreground: oklch(0.98 0.01 250);
+  --primary: oklch(0.65 0.18 320); /* Vibrant pink */
+  --primary-foreground: oklch(0.98 0.01 250);
+  --secondary: oklch(0.6 0.15 200); /* Teal/cyan */
+  --secondary-foreground: oklch(0.98 0.01 250);
+  --muted: oklch(0.3 0.05 270);
+  --muted-foreground: oklch(0.75 0.03 250);
+  --accent: oklch(0.55 0.16 280); /* Purple accent */
+  --accent-foreground: oklch(0.98 0.01 250);
+  --border: oklch(0.3 0.06 270);
+  --input: oklch(0.25 0.06 270);
+  --ring: oklch(0.65 0.18 320);
+  --chart-1: oklch(0.6 0.15 200);
+  --chart-2: oklch(0.65 0.18 320);
+  --chart-3: oklch(0.55 0.16 280);
+  --chart-4: oklch(0.7 0.14 340);
+  --chart-5: oklch(0.5 0.14 260);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.18 0.06 270);
+  --foreground: oklch(0.98 0.01 250);
+  --card: oklch(0.22 0.06 268);
+  --card-foreground: oklch(0.98 0.01 250);
+  --popover: oklch(0.22 0.06 268);
+  --popover-foreground: oklch(0.98 0.01 250);
+  --primary: oklch(0.65 0.18 320);
+  --primary-foreground: oklch(0.98 0.01 250);
+  --secondary: oklch(0.6 0.15 200);
+  --secondary-foreground: oklch(0.98 0.01 250);
+  --muted: oklch(0.3 0.05 270);
+  --muted-foreground: oklch(0.75 0.03 250);
+  --accent: oklch(0.55 0.16 280);
+  --accent-foreground: oklch(0.98 0.01 250);
+  --border: oklch(0.3 0.06 270);
+  --input: oklch(0.25 0.06 270);
+  --ring: oklch(0.65 0.18 320);
+  --chart-1: oklch(0.6 0.15 200);
+  --chart-2: oklch(0.65 0.18 320);
+  --chart-3: oklch(0.55 0.16 280);
+  --chart-4: oklch(0.7 0.14 340);
+  --chart-5: oklch(0.5 0.14 260);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced flowing wave pattern styles to match ProDesk branding with multiple animated wave layers */
+.wave-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.wave-pattern::before,
+.wave-pattern::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.wave-pattern::before {
+  top: -30%;
+  right: -10%;
+  width: 80%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, oklch(0.65 0.18 320) 0%, oklch(0.55 0.16 280) 30%, transparent 70%);
+  animation: wave-float-1 20s ease-in-out infinite;
+}
+
+.wave-pattern::after {
+  bottom: -20%;
+  left: -10%;
+  width: 70%;
+  height: 80%;
+  background: radial-gradient(ellipse at center, oklch(0.55 0.16 280) 0%, oklch(0.6 0.15 200) 30%, transparent 70%);
+  animation: wave-float-2 18s ease-in-out infinite reverse;
+}
+
+/* Side wave patterns - left and right flowing waves */
+.wave-side-left,
+.wave-side-right {
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  opacity: 0.25;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.wave-side-left {
+  left: 0;
+}
+
+.wave-side-right {
+  right: 0;
+}
+
+.wave-side-left::before,
+.wave-side-left::after,
+.wave-side-right::before,
+.wave-side-right::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(70px);
+}
+
+.wave-side-left::before {
+  top: 10%;
+  left: -40%;
+  background: radial-gradient(
+    circle at center,
+    oklch(0.65 0.18 320 / 0.6) 0%,
+    oklch(0.55 0.16 280 / 0.3) 40%,
+    transparent 70%
+  );
+  animation: wave-side-float-1 15s ease-in-out infinite;
+}
+
+.wave-side-left::after {
+  top: 50%;
+  left: -50%;
+  background: radial-gradient(
+    circle at center,
+    oklch(0.55 0.16 280 / 0.5) 0%,
+    oklch(0.65 0.18 320 / 0.2) 40%,
+    transparent 70%
+  );
+  animation: wave-side-float-2 18s ease-in-out infinite reverse;
+}
+
+.wave-side-right::before {
+  top: 20%;
+  right: -40%;
+  background: radial-gradient(
+    circle at center,
+    oklch(0.6 0.15 200 / 0.6) 0%,
+    oklch(0.55 0.16 280 / 0.3) 40%,
+    transparent 70%
+  );
+  animation: wave-side-float-1 16s ease-in-out infinite reverse;
+}
+
+.wave-side-right::after {
+  top: 60%;
+  right: -50%;
+  background: radial-gradient(
+    circle at center,
+    oklch(0.65 0.18 320 / 0.5) 0%,
+    oklch(0.6 0.15 200 / 0.2) 40%,
+    transparent 70%
+  );
+  animation: wave-side-float-2 19s ease-in-out infinite;
+}
+
+@keyframes wave-side-float-1 {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.1);
+  }
+}
+
+@keyframes wave-side-float-2 {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(40px) scale(0.9);
+  }
+}
+
+/* Additional wave animation layer for sections */
+.wave-accent {
+  position: relative;
+}
+
+.wave-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle at center,
+    oklch(0.65 0.18 320 / 0.2) 0%,
+    oklch(0.55 0.16 280 / 0.1) 40%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  border-radius: 50%;
+  animation: wave-pulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes wave-float-1 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(-5%, 5%) rotate(5deg) scale(1.05);
+  }
+  66% {
+    transform: translate(5%, -5%) rotate(-5deg) scale(0.95);
+  }
+}
+
+@keyframes wave-float-2 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(5%, -3%) rotate(-3deg) scale(1.03);
+  }
+  66% {
+    transform: translate(-5%, 3%) rotate(3deg) scale(0.97);
+  }
+}
+
+@keyframes wave-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+/* Line pattern overlay for sections */
+.line-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image: repeating-linear-gradient(
+      45deg,
+      oklch(0.65 0.18 320) 0px,
+      oklch(0.65 0.18 320) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      oklch(0.55 0.16 280) 0px,
+      oklch(0.55 0.16 280) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  pointer-events: none;
+}
