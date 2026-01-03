@@ -77,7 +77,7 @@ export function ContactForm() {
           </div>
           <h3 className="text-xl font-semibold text-card-foreground mb-2">Error</h3>
           <p className="text-red-500 mb-4">{error}</p>
-          <Button onClick={() => setError("")} className="bg-primary hover:bg-primary/90">
+          <Button onClick={() => setError("")} className="bg-primary hover:bg-primary/80 font-semibold shadow-lg hover:shadow-xl transition-all">
             Try Again
           </Button>
         </div>
@@ -145,7 +145,7 @@ export function ContactForm() {
             type="submit"
             size="lg"
             disabled={isLoading}
-            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground disabled:opacity-50"
+            className="w-full bg-primary hover:bg-primary/80 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50"
           >
             {isLoading ? "Sending..." : "Send Message"}
           </Button>

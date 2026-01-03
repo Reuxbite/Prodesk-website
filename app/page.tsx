@@ -38,13 +38,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">
+              <Button size="lg" className="bg-primary hover:bg-primary/80 text-primary-foreground h-12 px-8 font-semibold shadow-lg hover:shadow-xl transition-all">
                 Schedule a Call
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
             <Link href="/#how-it-works">
-              <Button size="lg" variant="outline" className="h-12 px-8 border-primary/20 hover:bg-primary/5">
+              <Button size="lg" className="h-12 px-8 font-semibold border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground shadow-md hover:shadow-lg transition-all">
                 See How We Work
               </Button>
             </Link>
@@ -68,7 +68,7 @@ export default function HomePage() {
                 Hire people who fit your business. We focus on understanding the role before sourcing candidates.
               </p>
               <Link href="/recruitment">
-                <Button variant="outline" size="sm" className="text-primary hover:bg-primary/5">
+                <Button className="text-primary hover:bg-primary hover:text-primary-foreground font-semibold border-2 border-primary transition-all shadow-md hover:shadow-lg">
                   Talk About Hiring
                   <ArrowRight className="ml-1 h-3 w-3" />
                 </Button>
@@ -81,7 +81,7 @@ export default function HomePage() {
                 Reduce operational workload. Reliable virtual support for daily business tasks.
               </p>
               <Link href="/contact">
-                <Button variant="outline" size="sm" className="text-accent hover:bg-accent/5">
+                <Button className="text-accent hover:bg-accent hover:text-white font-semibold border-2 border-accent transition-all shadow-md hover:shadow-lg">
                   Explore VA Support
                   <ArrowRight className="ml-1 h-3 w-3" />
                 </Button>
@@ -127,7 +127,7 @@ export default function HomePage() {
           </div>
           <div className="text-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">
+              <Button size="lg" className="bg-primary hover:bg-primary/80 text-primary-foreground h-12 px-8 font-semibold shadow-lg hover:shadow-xl transition-all">
                 Start With a Call
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -163,7 +163,7 @@ export default function HomePage() {
           </div>
           <div className="text-center">
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/5">
+              <Button size="lg" className="bg-primary hover:bg-primary/80 text-primary-foreground h-12 px-8 font-semibold shadow-lg hover:shadow-xl transition-all">
                 See If We're a Fit
               </Button>
             </Link>
@@ -180,7 +180,7 @@ export default function HomePage() {
             Prodesk Solutions supports businesses through thoughtful recruitment and reliable virtual assistance.
           </p>
           <Link href="/contact">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">
+            <Button size="lg" className="bg-primary hover:bg-primary/80 text-primary-foreground h-12 px-8 font-semibold shadow-lg hover:shadow-xl transition-all">
               Contact Us
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -200,13 +200,13 @@ export default function HomePage() {
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">
+              <Button size="lg" className="bg-primary hover:bg-primary/80 text-primary-foreground h-12 px-8 font-semibold shadow-lg hover:shadow-xl transition-all">
                 Schedule a Call
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="h-12 px-8 border-primary/20 hover:bg-primary/5">
+              <Button size="lg" className="h-12 px-8 font-semibold border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground shadow-md hover:shadow-lg transition-all">
                 Contact Us
               </Button>
             </Link>
