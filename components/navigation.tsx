@@ -23,7 +23,7 @@ export function Navigation() {
             Contact
           </Link>
           <Link href="/contact">
-            <Button size="sm" className="bg-primary hover:bg-primary/80 text-primary-foreground font-semibold shadow-md hover:shadow-lg transition-all">
+            <Button size="sm" className="font-semibold">
               Schedule a Call
             </Button>
           </Link>
