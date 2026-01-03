@@ -7,26 +7,28 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Prodesk Solutions - Recruitment & Virtual Assistance",
+  metadataBase: new URL("https://prodesksolutions.in"),
+  title: "Recruitment Services India | Prodesk Solutions",
   description:
-    "Hire the right people and offload operational work. Prodesk Solutions provides focused recruitment and virtual assistance for growing teams.",
-  generator: "v0.app",
+    "Prodesk Solutions provides recruitment services for startups and growing businesses. We focus on hiring thoughtfully with a fit-first approach to recruitment consultancy.",
   icons: {
-    icon: [
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://prodesksolutions.in",
+    title: "Recruitment Services India | Prodesk Solutions",
+    description: "Thoughtful recruitment services for startups and growing businesses. We help you hire people who fit.",
+    images: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "https://prodesksolutions.in/og-image.png",
+        width: 1200,
+        height: 630,
       },
     ],
-    apple: "/apple-icon.png",
   },
 }
 
@@ -37,6 +39,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Schema.org structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Prodesk Solutions",
+              url: "https://prodesksolutions.in",
+              logo: "https://prodesksolutions.in/favicon.png",
+              description: "Prodesk Solutions provides recruitment services for startups and growing businesses.",
+              telephone: "+919321146067",
+              email: "Prodesksolutions1710@gmail.com",
+              areaServed: "IN",
+              sameAs: [],
+            }),
+          }}
+        />
+      </head>
       <body className={`${inter.className} antialiased`}>
         {children}
         <Analytics />

@@ -11,6 +11,14 @@ import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, Clock } from "lucide-react"
 import { useState, useEffect } from "react"
 import emailjs from "@emailjs/browser"
+import { Metadata } from "next"
+
+// Metadata for contact page
+export const metadata: Metadata = {
+  title: "Contact Prodesk | Recruitment Services",
+  description: "Get in touch with Prodesk Solutions. We're here to discuss your recruitment needs and hiring support. Contact us today for a consultation.",
+  canonical: "https://prodesksolutions.in/contact",
+}
 
 // Initialize EmailJS
 emailjs.init("VMaj8LG1AkExs0Dzs")

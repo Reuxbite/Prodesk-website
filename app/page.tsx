@@ -3,7 +3,19 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import Link from "next/link"
+import { Metadata } from "next"
 import { ArrowRight, Users, Headphones, CheckCircle2, Target, TrendingUp, Sparkles } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Recruitment Services India | Prodesk Solutions",
+  description: "Prodesk Solutions provides recruitment services for startups and growing businesses. We help you hire thoughtfully with a fit-first approach to recruitment and hiring support.",
+  openGraph: {
+    title: "Recruitment Services India | Prodesk Solutions",
+    description: "Thoughtful recruitment services for startups and growing businesses. We help you hire people who fit.",
+    url: "https://prodesksolutions.in",
+    type: "website",
+  },
+}
 
 export default function HomePage() {
   return (
@@ -20,18 +32,13 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
             <Sparkles className="h-4 w-4 text-primary" />
-            <span className="text-sm text-primary font-medium">Clarity before execution</span>
+            <span className="text-sm text-primary font-medium">Understanding before hiring</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 text-balance leading-tight">
-            Hire the Right People.
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary">
-              Reduce Your Operational Load.
-            </span>
+            Recruitment built around how your business actually works
           </h1>
           <p className="text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed text-pretty">
-            ProDesk Solutions helps businesses find talent that fits and offload work that drains focus. We prioritize
-            understanding your business, not algorithms.
+            Most hiring problems don't come from lack of candidates. They come from poor role clarity and rushed decisions. We help businesses hire by first understanding the work, the team, and what success really looks like.
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link href="/contact">
@@ -53,6 +60,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Intro Section */}
+      <section className="py-16 px-6 relative overflow-hidden">
+        <div className="max-w-3xl mx-auto text-center relative z-10">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            Prodesk Solutions provides recruitment support for startups and growing businesses that want to hire thoughtfully. We spend time understanding your business, the role, and the kind of person who will work well in your environment before we begin sourcing candidates.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            This approach helps reduce bad hires, saves time, and leads to stronger teams over the long term. Learn more about our <Link href="/recruitment" className="text-primary hover:text-primary/90 font-semibold">recruitment services and consultancy approach</Link>.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Whether you're a startup hiring early team members or an established business needing hiring support, our recruitment consultancy can help.
+          </p>
+        </div>
+      </section>
+
       {/* What We Do Section */}
       <section id="services" className="py-20 px-6 bg-card/30 backdrop-blur-sm relative wave-accent overflow-hidden">
         <div className="wave-side-left" />
@@ -60,57 +82,39 @@ export default function HomePage() {
         <div className="line-pattern" />
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">What We Do</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Recruitment Services</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Two focused services. No fluff. Just reliable execution.
+              Hiring the right person is rarely about speed or volume. It's about clarity.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-8 bg-card border-border hover:border-primary/50 transition-all hover:shadow-xl hover:shadow-primary/10">
-              <div className="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center mb-6">
-                <Users className="h-6 w-6 text-secondary" />
-              </div>
-              <h3 className="text-2xl font-semibold text-card-foreground mb-4">Recruitment</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                We find people who actually fit your team and culture. No keyword matching. No resume spam. Just
-                thoughtful candidate selection based on what your business truly needs.
+          <div className="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
+            <Card className="p-8 bg-card border-border hover:border-primary/50 transition-all">
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Our recruitment services are designed to help businesses hire people who fit the role and the team, not just the job description. We work closely with you to understand what the role involves day to day, what kind of person will succeed in it, and what you expect in the long run.
               </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Deep understanding of your business and culture</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Fit-first candidate evaluation</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Quality over quantity approach</span>
-                </li>
-              </ul>
-            </Card>
-            <Card className="p-8 bg-card border-border hover:border-primary/50 transition-all hover:shadow-xl hover:shadow-primary/10">
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6">
-                <Headphones className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-2xl font-semibold text-card-foreground mb-4">Virtual Assistance</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Get operational work off your plate. From admin tasks to customer support, we provide reliable virtual
-                assistants who understand execution and accountability.
+              <p className="text-muted-foreground leading-relaxed mb-8 font-semibold">
+                Only after that do we start sourcing and evaluating candidates.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Administrative and operational support</span>
+                  <span className="text-sm text-muted-foreground">Understanding the role and business context</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Customer service and communication</span>
+                  <span className="text-sm text-muted-foreground">Targeted candidate sourcing</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Cost-efficient, reliable execution</span>
+                  <span className="text-sm text-muted-foreground">Practical screening based on real work, not keywords</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Shortlisting candidates who make sense, not just look good on paper</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Support through interviews and final hiring decisions</span>
                 </li>
               </ul>
             </Card>
@@ -126,9 +130,9 @@ export default function HomePage() {
         <div className="line-pattern" />
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">How We Work</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">How Our Recruitment Process Works</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A simple, transparent process designed around understanding your needs first.
+              No rushed shortlists. No bulk resumes.
             </p>
           </div>
           <div className="space-y-8">
@@ -137,10 +141,9 @@ export default function HomePage() {
                 1
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Discovery Call</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">We spend time understanding your business and the role</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We start by understanding your business, your team dynamics, and the specific challenges you're
-                  facing. This isn't a sales pitch—it's a real conversation about what you need.
+                  This isn't a quick check-in. We want to know what the day-to-day really looks like, what challenges the person will face, and what success actually means in this position.
                 </p>
               </div>
             </div>
@@ -149,10 +152,9 @@ export default function HomePage() {
                 2
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Custom Strategy</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">We clarify expectations, responsibilities, and priorities</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We build a tailored approach based on your requirements. Whether it's recruitment or virtual
-                  assistance, we map out a clear plan that fits your timeline and budget.
+                  We work with you to define what good looks like. What skills matter. What personality traits will fit your team. This clarity guides everything that comes next.
                 </p>
               </div>
             </div>
@@ -161,10 +163,9 @@ export default function HomePage() {
                 3
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Execution & Delivery</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">We source candidates who align with those requirements</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We source, vet, and present candidates or deploy virtual assistants who meet your standards. No
-                  filler. No false promises. Just focused work that gets you results.
+                  We look for people who match the profile we've developed, not just people with the right keywords on their resume. Quality over volume.
                 </p>
               </div>
             </div>
@@ -173,10 +174,20 @@ export default function HomePage() {
                 4
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Ongoing Partnership</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">We screen for fit, communication, and capability</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We stay engaged to ensure everything works as expected. We're here for the long term, ready to adjust
-                  and support as your needs evolve.
+                  We do practical screening to see if candidates can actually do the work and work well with your team. Then we present the strongest candidates to you.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-6 items-start">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center shrink-0 text-foreground font-semibold">
+                5
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">We help you make a confident hiring decision</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We support you through interviews, answer your questions, and help you choose someone you'll actually be happy to work with six months from now.
                 </p>
               </div>
             </div>
@@ -191,40 +202,43 @@ export default function HomePage() {
         <div className="line-pattern" />
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why ProDesk</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Work With Prodesk for Recruitment</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We're different because we care about fit, not just filling roles.
+              Many recruitment agencies focus on speed and volume. We focus on understanding.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-8 bg-card border-border text-center hover:border-accent/50 transition-all">
-              <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mx-auto mb-6">
-                <Target className="h-6 w-6 text-accent" />
-              </div>
-              <h3 className="text-xl font-semibold text-card-foreground mb-3">Fit-First Hiring</h3>
+          <div className="max-w-2xl mx-auto mb-12">
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Prodesk works more like a recruitment consultancy than a placement agency. We take fewer roles, ask more questions, and aim to help you make hiring decisions you won't regret six months later.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-8 bg-card border-border text-left hover:border-accent/50 transition-all">
+              <CheckCircle2 className="h-6 w-6 text-accent mb-4" />
+              <h3 className="text-lg font-semibold text-card-foreground mb-3">We prioritize fit over fast placements</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We prioritize cultural and operational fit over resumes. The right person for your team matters more
-                than the perfect CV.
+                Finding someone fast is easy. Finding someone who'll still be there, performing well, in a year is harder. That's what we focus on.
               </p>
             </Card>
-            <Card className="p-8 bg-card border-border text-center hover:border-primary/50 transition-all">
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mx-auto mb-6">
-                <CheckCircle2 className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold text-card-foreground mb-3">Focused Services</h3>
+            <Card className="p-8 bg-card border-border text-left hover:border-primary/50 transition-all">
+              <CheckCircle2 className="h-6 w-6 text-primary mb-4" />
+              <h3 className="text-lg font-semibold text-card-foreground mb-3">We take time to understand the business, not just the role</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We do two things well: recruitment and virtual assistance. No sprawling service menus. No distractions.
-                Just expertise where it counts.
+                Your role doesn't exist in a vacuum. We want to know your business, your team, your culture. That context matters.
               </p>
             </Card>
-            <Card className="p-8 bg-card border-border text-center hover:border-secondary/50 transition-all">
-              <div className="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="h-6 w-6 text-secondary" />
-              </div>
-              <h3 className="text-xl font-semibold text-card-foreground mb-3">Long-Term Mindset</h3>
+            <Card className="p-8 bg-card border-border text-left hover:border-secondary/50 transition-all">
+              <CheckCircle2 className="h-6 w-6 text-secondary mb-4" />
+              <h3 className="text-lg font-semibold text-card-foreground mb-3">We work well with small teams and founders</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We're not here for quick wins. We build partnerships that last, supporting your business as it grows and
-                changes over time.
+                We get it. Every hire matters when you're small. We treat your hiring like it matters, because it does.
+              </p>
+            </Card>
+            <Card className="p-8 bg-card border-border text-left hover:border-accent/50 transition-all">
+              <CheckCircle2 className="h-6 w-6 text-accent mb-4" />
+              <h3 className="text-lg font-semibold text-card-foreground mb-3">We value long-term outcomes over short-term wins</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                We're not trying to hit a quota. We're trying to help you hire someone great who'll help your business grow.
               </p>
             </Card>
           </div>
@@ -239,21 +253,17 @@ export default function HomePage() {
         <div className="line-pattern" />
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About ProDesk</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About Prodesk</h2>
           </div>
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              ProDesk Solutions was built on a simple belief: hiring and operational support shouldn't be transactional.
-              They should be thoughtful, human processes that prioritize long-term success over quick fixes.
+              Prodesk Solutions was built on a simple belief: hiring shouldn't be transactional. It shouldn't be about resumes and keywords and speed. It should be thoughtful, human, and focused on helping you make decisions that actually work out.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              We work with founders, operators, and growing teams who value clarity, fit, and execution. Our approach is
-              grounded in understanding your business first—not pushing templated solutions or chasing metrics that
-              don't matter.
+              We work with founders, operators, and growing teams who value clarity and care about getting it right. We don't have fancy marketing. We don't promise quick fixes. We ask good questions, do the work, and help you hire people who'll actually succeed in your business.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Whether you need to hire the right people or offload operational work, we're here to deliver reliable,
-              cost-efficient results. No buzzwords. No hype. Just a partner who gets the work done.
+              That's it. No buzzwords. No hype. Just a partner who gets that hiring matters and does the work to get it right.
             </p>
           </div>
         </div>
@@ -266,9 +276,9 @@ export default function HomePage() {
         <div className="wave-side-right" />
         <div className="line-pattern" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Ready to Work Together?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Ready to Hire Better?</h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-            Let's talk about how ProDesk can help you hire better and work smarter.
+            Let's talk about how we can help you find people who actually fit your team.
           </p>
           <Link href="/contact">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">

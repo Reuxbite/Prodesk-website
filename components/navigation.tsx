@@ -10,14 +10,14 @@ export function Navigation() {
           <Image src="/prodesk-logo.png" alt="ProDesk Solutions" width={180} height={80} className="h-12 w-auto" />
         </Link>
         <div className="flex items-center gap-8">
-          <Link href="/#services" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
-            Services
+          <Link href="/recruitment" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
+            Recruitment Services
           </Link>
           <Link href="/#how-we-work" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
             How We Work
           </Link>
           <Link href="/#why-prodesk" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
-            Why ProDesk
+            Why Prodesk
           </Link>
           <Link href="/#about" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
             About

@@ -23,18 +23,26 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/#services"
+                  href="/recruitment"
                   className="text-sm text-muted-foreground hover:text-secondary transition-colors"
                 >
-                  Recruitment
+                  Recruitment Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#services"
+                  href="/recruitment"
                   className="text-sm text-muted-foreground hover:text-secondary transition-colors"
                 >
-                  Virtual Assistance
+                  Recruitment Consultancy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/recruitment"
+                  className="text-sm text-muted-foreground hover:text-secondary transition-colors"
+                >
+                  Hiring Support
                 </Link>
               </li>
             </ul>
