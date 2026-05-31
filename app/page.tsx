@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import Link from "next/link"
 import { Metadata } from "next"
-import { ArrowRight, Users, Brain } from "lucide-react"
+import { ArrowRight, Brain, Calculator, Headphones, HeartHandshake, Megaphone, Users } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Recruitment & Virtual Assistance | Prodesk Solutions",
@@ -82,44 +82,83 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Recruitment Card */}
-            <Card className="group relative overflow-hidden bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-pink-500/20 hover:border-pink-500/50 p-8 md:p-10 transition-all duration-300 hover:shadow-lg hover:shadow-pink-600/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative z-10 space-y-6">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl md:text-3xl font-bold">Recruitment</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Sourcing and placing top talent. We handle the entire recruitment process so you can focus on building your team.
-                  </p>
-                </div>
-                <Link href="/recruitment" className="inline-flex items-center text-pink-500 hover:text-pink-400 font-medium group/link transition-colors">
-                  Learn more <ArrowRight className="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Virtual Assistance",
+                description: "Administrative support that scales with your business. From scheduling to operations, we've got you covered.",
+                icon: Brain,
+                accent: "from-purple-500 to-pink-600",
+                border: "border-purple-500/20",
+                shadow: "hover:shadow-purple-600/20",
+                glow: "from-purple-600/5",
+              },
+              {
+                title: "Customer Support",
+                description: "Responsive customer care support designed to help you serve clients with consistency and professionalism.",
+                icon: Headphones,
+                accent: "from-pink-500 to-purple-600",
+                border: "border-pink-500/20",
+                shadow: "hover:shadow-pink-600/20",
+                glow: "from-pink-600/5",
+              },
+              {
+                title: "Accounting Operations",
+                description: "Reliable accounting operations support to keep routine finance workflows organized, accurate, and efficient.",
+                icon: Calculator,
+                accent: "from-purple-500 to-pink-600",
+                border: "border-purple-500/20",
+                shadow: "hover:shadow-purple-600/20",
+                glow: "from-purple-600/5",
+              },
+              {
+                title: "Marketing",
+                description: "Marketing support for everyday execution, coordination, and campaign operations that keep growth moving.",
+                icon: Megaphone,
+                accent: "from-pink-500 to-purple-600",
+                border: "border-pink-500/20",
+                shadow: "hover:shadow-pink-600/20",
+                glow: "from-pink-600/5",
+              },
+              {
+                title: "Human Resources",
+                description: "HR support that helps manage people operations, documentation, coordination, and employee-facing workflows.",
+                icon: Users,
+                accent: "from-purple-500 to-pink-600",
+                border: "border-purple-500/20",
+                shadow: "hover:shadow-purple-600/20",
+                glow: "from-purple-600/5",
+              },
+              {
+                title: "Outsourcing (HRO)",
+                description: "Human resource outsourcing support built to simplify non-core functions and improve operational focus.",
+                icon: HeartHandshake,
+                accent: "from-pink-500 to-purple-600",
+                border: "border-pink-500/20",
+                shadow: "hover:shadow-pink-600/20",
+                glow: "from-pink-600/5",
+              },
+            ].map((service) => {
+              const Icon = service.icon
 
-            {/* Virtual Assistance Card */}
-            <Card className="group relative overflow-hidden bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-purple-500/20 hover:border-pink-500/50 p-8 md:p-10 transition-all duration-300 hover:shadow-lg hover:shadow-purple-600/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative z-10 space-y-6">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
-                  <Brain className="w-6 h-6 text-white" />
-                </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl md:text-3xl font-bold">Virtual Assistance</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Administrative support that scales with your business. From scheduling to operations, we've got you covered.
-                  </p>
-                </div>
-                <button className="inline-flex items-center text-purple-400 hover:text-pink-500 font-medium group/link transition-colors">
-                  Learn more <ArrowRight className="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
-                </button>
-              </div>
-            </Card>
+              return (
+                <Card
+                  key={service.title}
+                  className={`group relative overflow-hidden bg-gradient-to-br from-slate-800/50 to-slate-900/50 border ${service.border} hover:border-pink-500/50 p-8 md:p-10 transition-all duration-300 hover:shadow-lg ${service.shadow}`}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${service.glow} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                  <div className="relative z-10 space-y-6">
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.accent} flex items-center justify-center`}>
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="space-y-3">
+                      <h3 className="text-2xl md:text-3xl font-bold">{service.title}</h3>
+                      <p className="text-gray-300 leading-relaxed">{service.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -162,6 +201,33 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* MISSION & VISION SECTION */}
+      <section id="mission-vision" className="relative py-20 md:py-32 overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="group relative overflow-hidden bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-pink-500/20 hover:border-pink-500/50 p-8 md:p-10 transition-all duration-300 hover:shadow-lg hover:shadow-pink-600/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10 space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold">Vision</h2>
+                <p className="text-gray-300 leading-relaxed">
+                  Prodesk has a vision of a future in which businesses flourish by embracing innovative outsourcing solutions. We aim to become the leading option known for efficiency, strategic partnerships, and long-lasting success. Our dedication lies in reshaping industry norms, empowering organizations to reach their maximum potential in a constantly evolving global environment.
+                </p>
+              </div>
+            </Card>
+
+            <Card className="group relative overflow-hidden bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-purple-500/20 hover:border-pink-500/50 p-8 md:p-10 transition-all duration-300 hover:shadow-lg hover:shadow-purple-600/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10 space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold">Mission</h2>
+                <p className="text-gray-300 leading-relaxed">
+                  At Prodesk, our mission is to enhance business efficiency. By entrusting non-core functions to our team of skilled professionals, we strive to streamline operations, cut costs, and boost overall productivity for our clients.
+                </p>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
